@@ -8,6 +8,8 @@ import cors from "cors";
 import { server, app } from "./config/socket.js";
 dotenv.config();
 
+connectDB();
+
 app.use(
   cors({
     origin: "https://chat-nest-eight.vercel.app",
@@ -28,5 +30,4 @@ app.use("/api/messages", messageRouter);
 const port = process.env.PORT || 3000;
 server.listen(port, () => {
   console.log(`server running on port ${port}`);
-  connectDB();
 });
