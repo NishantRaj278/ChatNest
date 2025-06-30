@@ -8,7 +8,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: [process.env.CLIENT_API],
+    origin: ["https://chat-nest-eight.vercel.app"],
   },
 });
 
