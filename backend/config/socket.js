@@ -9,6 +9,7 @@ const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
     origin: ["https://chat-nest-flax.vercel.app"],
+    credentials: true,
   },
 });
 
