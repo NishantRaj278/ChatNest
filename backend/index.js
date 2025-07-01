@@ -12,7 +12,7 @@ connectDB();
 
 app.use(
   cors({
-    origin: "https://chat-nest-eight.vercel.app",
+    origin: "http://localhost:5173",
     credentials: true,
   })
 );
