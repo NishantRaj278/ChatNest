@@ -6,6 +6,7 @@ import connectDB from "./config/mongoose-connection.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import { server, app } from "./config/socket.js";
+import path from "path";
 dotenv.config();
 
 connectDB();
