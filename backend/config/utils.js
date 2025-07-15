@@ -1,3 +1,5 @@
+import dotenv from "dotenv";
+dotenv.config();
 import jwt from "jsonwebtoken";
 
 export const genToken = (userId, res) => {
@@ -9,6 +11,7 @@ export const genToken = (userId, res) => {
     httpOnly: true,
     sameSite: "strict",
     maxAge: 7 * 24 * 60 * 60 * 1000,
+    secure: process.env.NODE_ENV !== "development",
   });
 
   return token;
